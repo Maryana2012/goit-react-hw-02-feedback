@@ -1,0 +1,32 @@
+.Article {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 10px;
+}
+
+.Text {
+    display: flex;
+    font-size: 16px;
+    font-weight: 700;
+    margin-right: 5px;
+    background-color: rgb(239, 209, 214);
+    border: 1px solid rgb(203, 154, 162);
+    border-radius: 10px;
+    width: 120px;
+    height: 35px;
+    align-items: center;
+    justify-content: center;
+}
+.TextTotal {
+    display: flex;
+    font-size: 16px;
+    font-weight: 400;
+    margin-right: 5px;
+    background-color: rgb(235, 124, 124);
+    border: 1px solid rgb(164, 144, 148);
+    border-radius: 10px;
+    width: 200px;
+    height: 35px;
+    align-items: center;
+    justify-content: center;
+}

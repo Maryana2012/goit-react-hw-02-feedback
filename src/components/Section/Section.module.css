@@ -1,0 +1,14 @@
+.Section {
+    padding: 20px;
+    background-color: rgb(211, 242, 231);
+    width: 500px;
+    border: 2px solid rgb(99, 115, 109);
+    ;
+}
+.Title {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    margin-top: 0;
+    text-align: center;
+}
