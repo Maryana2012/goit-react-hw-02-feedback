@@ -29,8 +29,7 @@ export default class Feedback extends React.Component {
     render() {
         return (<Section title='Please leave feedback'>          
              <FeedbackOptions
-                onLeaveFeedback={this.handleFeedback}
-                
+                onLeaveFeedback={this.handleFeedback}  
             />
             <p className={css.Subtitle}>Statistics</p>
             {(this.state.good === 0 && this.state.neutral === 0 && this.state.bad === 0)
@@ -43,8 +42,6 @@ export default class Feedback extends React.Component {
                    total={this.countTotalFeedback()}
                    positivePercentage={this.countPositiveFeedbackPercentage()} />        }
              </Section>
-            
-            
         )        
     }
 }
