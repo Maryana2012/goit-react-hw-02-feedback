@@ -27,21 +27,28 @@ export default class Feedback extends React.Component {
         return positivePercentage;
     }
     render() {
-        return (<Section title='Please leave feedback'>          
+        return (<div>
+        <Section title='Please leave feedback'>          
              <FeedbackOptions
                 onLeaveFeedback={this.handleFeedback}  
-            />
-            <p className={css.Subtitle}>Statistics</p>
-            {(this.state.good === 0 && this.state.neutral === 0 && this.state.bad === 0)
+                options={['good', 'neutral', 'bad']} />
+              </Section>      
+           
+            <Section title="Statistics">
+               {(this.state.good === 0 && this.state.neutral === 0 && this.state.bad === 0)
                 ?  <Notification
-                   message="There is no feedback"/>
+                message="There is no feedback"/>
                 :  <Statistics
                    good={this.state.good}
                    neutral={this.state.neutral}
                    bad={this.state.bad}
                    total={this.countTotalFeedback()}
                    positivePercentage={this.countPositiveFeedbackPercentage()} />        }
-             </Section>
+            </Section>
+        </div>
+
+            
+             
         )        
     }
 }
