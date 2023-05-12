@@ -26,12 +26,15 @@ export default class Feedback extends React.Component {
         let positivePercentage = Math.ceil(this.state.good / (this.state.good + this.state.neutral + this.state.bad) * 100);
         return positivePercentage;
     }
-    render() {
+    
+     render() {
+         const options = Object.keys(this.state);
         return (<div>
-        <Section title='Please leave feedback'>          
+            
+              <Section title='Please leave feedback'>          
              <FeedbackOptions
                 onLeaveFeedback={this.handleFeedback}  
-                options={['good', 'neutral', 'bad']} />
+                options={options} />
               </Section>      
            
             <Section title="Statistics">
